@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>原创小说交流会 · Writer’s Salon</title>
+    <style>
+        /* 页面整体：背景色薄雾紫，居中布局 */
+        body {
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            background-color: #F0E8FF; /* 题目要求背景色：薄雾紫 */
+            color: #3b3025;
+            text-align: center;
+        }
+
+        /* 题目要求3：在head中声明样式“.page”，除了背景色不允许修改 */
+        .page {
+            display: inline-block;
+            background-color: #fefaf5;
+            box-shadow: 0 0 30px rgba(80, 58, 35, 0.25);
+            text-align: left;
+            max-width: 720px;
+        }
+
+        /* 题目要求5-③：并集选择器 */
+        h1, h2, h3, h4, h5, h6 {
+            color: #5b4636;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        /* 题目要求5-④：ID选择器 p#intro */
+        p#intro {
+            font-size: 120%;
+            font-weight: bold;
+            color: #e25b3d;
+            text-align: center;
+            border: 2px dashed #e25b3d; /* 增加边框以突出显示 */
+        }
+
+        /* 题目要求5-⑥：伪元素 p::first-letter */
+        p::first-letter {
+            font-size: 200%;
+            color: #6a5acd; /* 配合薄雾紫主题的深紫色 */
+            float: left;
+            margin-right: 5px;
+            line-height: 1;
+        }
+
+        /* 题目要求5-⑥：伪元素 div::first-line */
+        div::first-line {
+            color: #483D8B;
+            font-weight: bold;
+        }
+
+        /* 表格样式 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #E6E6FA; /* 淡紫色表头 */
+        }
+
+        /* 题目要求5-①：后代选择器 div table a */
+        div table a {
+            color: #800080;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* 题目要求5-②：链接伪类 */
+        a:link {
+            color: #4b0082;
+            text-decoration: none;
+        }
+        a:visited {
+            color: #8a2be2;
+        }
+        a:hover {
+            color: #ff4500;
+            text-decoration: underline;
+        }
+        a:active {
+            color: #0000ff;
+        }
+
+        /* 题目要求5-⑤：带类名的链接 */
+        a.red {
+            color: red;
+            font-weight: bold;
+        }
+        a.blue {
+            color: blue;
+            font-style: italic;
+        }
+
+        /* 底部公告样式 */
+        .notice {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #E6E6FA;
+            border-top: 2px solid #9370DB;
+            font-size: 0.9em;
+        }
+
+        /* 辅助居中类 */
+        .center-text {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 题目要求3：在body中添加调用这个样式 -->
+    <div class="page">
+        
+        <!-- 区域①：顶部标题区 -->
+        <div>
+            <h1>原创小说交流会 · Writer’s Salon</h1>
+        </div>
+        <br>
+
+        <!-- 区域②：活动介绍区 -->
+        <div>
+            <h2 id="intro">活动宗旨：让想象力自由生长</h2>
+            
+            <p>
+                在这个快节奏的时代，我们依然相信文字的力量。本次沙龙旨在汇聚热爱创作的灵魂，无论你是构建宏大世界观的奇幻写手，还是记录生活点滴的现实主义者。在这里，没有评判，只有灵感的碰撞与共鸣。
+            </p>
+            
+            <p>
+                我们将提供舒适的写作环境与无限续杯的咖啡。带上你的大纲、初稿或是成书，与志同道合的伙伴们一起探讨情节的起承转合，人物的悲欢离合。让孤独的创作之旅，变成一场温暖的相遇。
+            </p>
+
+            <!-- 题目要求4-②：一个 p id="intro"（重要提示） -->
+            <p id="intro">
+                重要提示：请携带至少 1000 字的原创作品片段参与现场朗读环节！
+            </p>
+        </div>
+        <br>
+
+        <!-- 区域③：活动报名信息表格区 -->
+        <div>
+            <h3>已报名创作者名单</h3>
+            <table>
+                <tr>
+                    <th>昵称</th>
+                    <th>作品类型</th> <!-- 题目要求：必须加一列“作品类型” -->
+                    <th>个人主页/代表作</th>
+                </tr>
+                <tr>
+                    <td>墨香客</td>
+                    <td>历史架空</td>
+                    <td><a href="#">《长河落日》</a></td>
+                </tr>
+                <tr>
+                    <!-- 题目要求：其中一位报名者必须使用英文笔名 -->
+                    <td>ShadowInk</td>
+                    <td>悬疑推理</td>
+                    <td><a href="#">《第十三级台阶》</a></td>
+                </tr>
+                <tr>
+                    <td>云中君</td>
+                    <td>奇幻冒险</td>
+                    <td><a href="#">《龙息大陆》</a></td>
+                </tr>
+            </table>
+        </div>
+        <br>
+
+        <!-- 区域④：页面链接区 -->
+        <div class="center-text">
+            <div>
+                <!-- 题目要求：所有超链接文字必须与“写作/小说/创作”相关 -->
+                <!-- 题目要求：查看往期活动照片要跳转到教师参考代码的页面 -->
+                <a class="red" href="https://hongchenwusdnu.github.io/bookstore/job4.html">回顾往期小说创作沙龙照片</a>
+                <br><br>
+                <!-- 题目要求：在线咨询活动详情要跳转到指定页面 -->
+                <a class="blue" href="https://liqinhang.github.io/lqh/job3/job3.html">咨询小说写作活动详情</a>
+            </div>
+        </div>
+        <br>
+
+        <!-- 区域⑤：底部公告区 -->
+        <!-- 题目要求：含 br 换行符，至少三段 -->
+        <div class="notice">
+            本周推荐阅读：史蒂芬·金《写作这回事》，探索大师的创作秘密。<br>
+            下期活动预告：“非虚构写作的魅力”，特邀资深记者分享采访技巧。<br>
+            特别鸣谢：城市书店提供场地支持，愿每一位写作者都能找到属于自己的光。
+        </div>
+
+    </div>
+
+</body>
+</html>
